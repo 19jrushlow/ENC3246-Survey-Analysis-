@@ -29,6 +29,13 @@ def print_all():
         print("\n")
 
 
+def get_responses(question_index):  # get a list of responses to each question (0-10)
+    arr = []
+    for i in response_list:
+        arr.append(i[question_index])
+    return arr
+
+
 with open("SurveyResults.csv", "r") as file:
     listy = file.readlines()
 
